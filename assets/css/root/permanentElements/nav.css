@@ -1,0 +1,43 @@
+div#navRootCont {
+    position: absolute;
+    width: 100%;
+    height: initial;
+    border: solid red px;
+    z-index: 99;
+}
+.navSolid {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: rgb(48, 12, 12);
+    justify-content: center;
+}
+.logoCont {
+    margin-right: 25em;
+    width: 170px;
+    height: 100px;
+    /*background: yellow;*/
+}
+.logoAbs {
+    width: 100%;
+    height: 100%;
+    background: url('../../../img/local/localLogo.png');
+    background-position: center -2.4em;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.buttonCont {
+    position: relative;
+    height: 100%;
+}
+.navButtons {
+    display: inline-flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    margin: 0 0.5em;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+}
