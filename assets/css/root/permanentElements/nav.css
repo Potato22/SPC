@@ -85,6 +85,7 @@ div#navRootCont {
 .open {
     transform: translateX(0px);
     transition: all 0.3s cubic-bezier(.34,.01,.1,.99);
+    pointer-events: all;
 }
 .dropButtonCont {
     display: flex;
