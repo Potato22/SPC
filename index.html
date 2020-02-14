@@ -22,7 +22,10 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/Potato22/SPC/master/assets/img/content/defaultBg.png">
     
     <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400i|Asap:400,400i,600,700|Montserrat:300,400,700|Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/pages/index/index.css">
+    <script src="assets/script/mobileDrop.js"></script>
     
     <link rel="stylesheet" href="assets/css/root/rootSettings.css">
 </head>
@@ -37,8 +40,23 @@
                 <a href="" class="navButtons">buttons2</a>
                 <a href="" class="navButtons">buttons3</a>
             </div>
+            <div class="mobileDrop">
+                <div class="mobileDropButton">
+                    <i class="material-icons">menu</i>
+                </div>
+            </div>
+        </div>
+        <div class="dropFrameCont">
+            <div class="dropFrame">
+                <div class="dropButtonCont">
+                    <a href="" class="navButtons drop">buttons1</a>
+                    <a href="" class="navButtons drop">buttons2</a>
+                    <a href="" class="navButtons drop">buttons3</a>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="dimmer"></div>
     <div id="intro">
         <div class="bgHero" data-aos="zoom-out" data-aos-duration="500"></div>
         <div class="subBox" data-aos="fade-in" data-aos-duration="500">
@@ -46,6 +64,7 @@
             <div class="subButton">PRE-REGISTRATION OPENS SOON</div>
         </div>
     </div>
+    <div style="height: 500px;">samplepage</div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     AOS.init();

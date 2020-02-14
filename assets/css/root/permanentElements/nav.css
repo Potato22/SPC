@@ -1,22 +1,23 @@
 div#navRootCont {
-    position: absolute;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: initial;
-    border: solid red px;
+    border: solid red 0px;
     z-index: 99;
 }
 .navSolid {
     display: flex;
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 50px;
     background: rgb(48, 12, 12);
     justify-content: center;
 }
 .logoCont {
     margin-right: 25em;
-    width: 170px;
-    height: 100px;
+    min-width: 170px;
+    min-height: 100px;
     /*background: yellow;*/
 }
 .logoAbs {
@@ -29,15 +30,97 @@ div#navRootCont {
 }
 .buttonCont {
     position: relative;
-    height: 100%;
+    display: flex;
+    align-items: center;
 }
+
 .navButtons {
-    display: inline-flex;
     position: relative;
-    height: 100%;
     align-items: center;
     margin: 0 0.5em;
     color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
+}
+.mobileDrop {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
+    margin-right: 1em;
+}
+.mobileDropButton {
+    position: absolute;
+    color: white;
+    border: solid white 1px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+.dropActive {
+    color: black;
+    border: solid rgb(255, 255, 255) 1px;
+    background: rgb(255, 255, 255);
+}
+.dropFrameCont {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+.dropFrame {
+    width: 280px;
+    background: rgb(0, 0, 0,.7);
+    height: 100vh;
+    transition: all 0.4s cubic-bezier(.79,.01,.5,1);
+    transform: translate(280px);
+}
+.open {
+    transform: translateX(0px);
+    transition: all 0.3s cubic-bezier(.34,.01,.1,.99);
+}
+.dropButtonCont {
+    display: flex;
+    flex-direction: column;
+}
+.drop {
+    text-align: center;
+    padding: 1.5em 0;
+}
+.dimmer {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 98;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .navSolid {
+        justify-content: space-between;
+    }
+    .logoCont {
+        margin-right: 0;
+        margin-left: 1em;
+    }
+    .buttonCont {
+        visibility: hidden;
+        position: absolute;
+    }
+    .mobileDrop {
+        visibility: visible;
+        position: relative;
+    }
+
 }
